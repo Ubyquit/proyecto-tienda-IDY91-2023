@@ -43,7 +43,7 @@ const actualizarFabricante = (req, res) => {
   const codigoFabricante = req.params.id_fabricante;
   const nuevoFabricante = req.body;
 
-  connection.query('UPDATE fabricante SET ? WHERE id_fabricante = ?', [nuevoFabricante, codigoFabricante], (error, results) => {
+  connection.query('UPDATE fabricante SET?  WHERE id_fabricante = ?', [nuevoFabricante, codigoFabricante], (error, results) => {
     if (error) {
       console.error('Error al actualizar el fabricante', error);
       res.status(500).json({ error: 'Error al actualizar el fabricante' });

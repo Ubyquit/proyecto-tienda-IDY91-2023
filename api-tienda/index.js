@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const fabricantesRoutes = require('./routes/fabricantes'); // Importa las rutas de los fabricantes desde un archivo separado
+const productosRoutes = require('./routes/productos'); // Importa las rutas de los productos desde un archivo separado
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 
 // Rutas de los fabricantes
 app.use('/fabricantes', fabricantesRoutes);
+app.use('/productos', productosRoutes);
+
 
 // Configuración del puerto
 const port = 3001; // Puedes cambiar el puerto si es necesario
